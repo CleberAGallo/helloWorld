@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="laranja">
-    <ion-title>
-      Header
+    <ion-title class="ion-text-center">
+      Categorias
     </ion-title>
 
 
@@ -9,7 +9,33 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card color="light" class="ion-text-center">
+          <img src="https://d2byg56fbf6u3p.cloudfront.net/1/imagens/18008054045bae7b64d22100.78523072.1538161508.png" alt="">
+          <ion-item lines="none" color="dark">
+            <ion-label class="titulo-promo"> Veja nossas ofertas!</ion-label>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <img src="https://cdn.hum3d.com/wp-content/uploads/Harley-Davidson/071_Harley-Davidson_Deluxe_107_2021/Harley-Davidson_Deluxe_107_2021_1000_0001.jpg" alt="">
+          <ion-item lines="full" color="ligth" class="categorias-prod">Modelos Custom </ion-item>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <img src="https://360view.hum3d.com/zoom/Kawasaki/Kawasaki_ZX-10R_2017_1000_0001.jpg" alt="">
+          <ion-item lines="full" color="ligth" class="categorias-prod"> Modelos Sport </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
+  </ion-grid>
 </ion-content>
 
 <ion-footer>
