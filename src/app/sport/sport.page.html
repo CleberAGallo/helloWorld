@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+<ion-toolbar color="laranja">
+  <ion-title class="ion-text-center">
+    Sport
+  </ion-title>
+  <ion-buttons slot="start">
+    <ion-back-button>Button</ion-back-button>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar animated="true" placeholder="Pesquise o seu produto" color="dark" mode="ios"></ion-searchbar>
+
+  <ion-list>
+    <ion-item line="full" color="light" class="borda">
+      <ion-thumbnail slot="start">
+        <img src="https://360view.hum3d.com/zoom/Kawasaki/Kawasaki_ZX-10R_2017_1000_0001.jpg" />
+      </ion-thumbnail>
+      <ion-label>
+        <h1>R$ 73.100,00</h1>
+        <h2>Kawasaki ZX-10R</h2>
+        <p>Verde - 2017/2017</p>
+      </ion-label>
+      <ion-button expand="block" slot="end" color="blackzinho">
+        <ion-icon slot="icon-only" name="cart-outline" ></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+<ion-toolbar color="laranja">
+  <ion-title>
+    Footer
+  </ion-title>
+</ion-toolbar>
+</ion-footer>

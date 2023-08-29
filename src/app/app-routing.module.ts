@@ -10,7 +10,27 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'promocoes',
+    loadChildren: () => import('./promocoes/promocoes.module').then( m => m.PromocoesPageModule)
   },
+  {
+    path: 'custom',
+    loadChildren: () => import('./custom/custom.module').then( m => m.CustomPageModule)
+  },
+  {
+    path: 'sport',
+    loadChildren: () => import('./sport/sport.module').then( m => m.SportPageModule)
+  },
+  {
+    path: 'naked',
+    loadChildren: () => import('./naked/naked.module').then( m => m.NakedPageModule)
+  },
+  {
+    path: 'trail',
+    loadChildren: () => import('./trail/trail.module').then( m => m.TrailPageModule)
+  },
+
 ];
 
 @NgModule({

@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="laranja">
+    <ion-title class="ion-text-center">
+      Custom
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button>Button</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar animated="true" placeholder="Pesquise o seu produto" color="dark" mode="ios"></ion-searchbar>
+
+  <ion-list>
+    <ion-item line="full" color="light" class="borda">
+      <ion-thumbnail slot="start">
+        <img src="https://cdn.hum3d.com/wp-content/uploads/Harley-Davidson/071_Harley-Davidson_Deluxe_107_2021/Harley-Davidson_Deluxe_107_2021_1000_0001.jpg" />
+      </ion-thumbnail>
+      <ion-label>
+        <h1>R$ 70.600,00</h1>
+        <h2>Harley Davidson Deluxe</h2>
+        <p>Bordô - 2021/2021</p>
+      </ion-label>
+      <ion-button expand="block" slot="end" color="blackzinho">
+        <ion-icon slot="icon-only" name="cart-outline" ></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="laranja">
+    <ion-title>
+      Footer
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
