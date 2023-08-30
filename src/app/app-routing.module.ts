@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'trail',
     loadChildren: () => import('./trail/trail.module').then( m => m.TrailPageModule)
   },
+  {
+    path: 'carrinho',
+    loadChildren: () => import('./carrinho/carrinho.module').then( m => m.CarrinhoPageModule)
+  },
 
 ];
 
