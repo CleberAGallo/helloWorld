@@ -1,38 +1,43 @@
 <ion-header [translucent]="true">
-<ion-toolbar color="laranja">
-  <ion-title class="ion-text-center">
-    Naked
-  </ion-title>
-  <ion-buttons slot="start">
-    <ion-back-button>Button</ion-back-button>
-  </ion-buttons>
-</ion-toolbar>
+  <ion-toolbar color="dark">
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Naked</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/carrinho">
+        <ion-icon name="cart-outline"></ion-icon>
+        <ion-badge color="dark">{{qtdeItensCarrinho}}</ion-badge>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar animated="true" placeholder="Pesquise o seu produto" color="dark" mode="ios"></ion-searchbar>
 
-  <ion-list>
-    <ion-item line="full" color="light" class="borda">
-      <ion-thumbnail slot="start">
-        <img src="https://novasmotos.com.br/wp-content/uploads/2023/02/ktm-naked-com-cambio-automatico.jpg" />
-      </ion-thumbnail>
-      <ion-label>
-        <h1>R$ 35.600,00</h1>
-        <h2>KTM Duke 390</h2>
-        <p>Laranja - 2023/2023</p>
-      </ion-label>
-      <ion-button expand="block" slot="end" color="blackzinho">
-        <ion-icon slot="icon-only" name="cart-outline" ></ion-icon>
-      </ion-button>
-    </ion-item>
-  </ion-list>
+  <ion-item *ngFor="let naked of listaNaked" lines="full" color="light" class="borda">
+
+    <ion-thumbnail slot="start">
+      <img [src]="naked.imagem"/>
+    </ion-thumbnail>
+    <ion-label>
+      <h2>{{ naked.nome }}</h2>
+      <p>{{ naked.descricao }}</p>
+    </ion-label>
+
+    <ion-button expand="block" slot="end" (click)="addProdutoCarrinho(naked)" color="dark">
+      <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+    </ion-button>
+    <ion-badge color="danger">R$ {{ naked.valor | number:'1.2-2' }}</ion-badge>
+  </ion-item>
+
+
 </ion-content>
 
 <ion-footer>
-<ion-toolbar color="laranja">
-  <ion-title>
-    Footer
-  </ion-title>
-</ion-toolbar>
+  <ion-toolbar color="dark">
+
+  </ion-toolbar>
 </ion-footer>

@@ -1,38 +1,40 @@
 <ion-header [translucent]="true">
-<ion-toolbar color="laranja">
-  <ion-title class="ion-text-center">
-    Trail
-  </ion-title>
-  <ion-buttons slot="start">
-    <ion-back-button>Button</ion-back-button>
-  </ion-buttons>
-</ion-toolbar>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button>Button</ion-back-button>
+    </ion-buttons>
+    <ion-title>Trail</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/carrinho">
+        <ion-icon name="cart-outline"></ion-icon>
+        <ion-badge color="dark">{{qtdeItensCarrinho}}</ion-badge>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    <ion-searchbar animated="true" placeholder="Pesquise o seu produto" color="dark" mode="ios"></ion-searchbar>
 
-    <ion-list>
-      <ion-item line="full" color="light" class="borda">
-        <ion-thumbnail slot="start">
-          <img src="https://amaromotos.com.br/wp-content/uploads/2023/04/AmaroMotos-NH300-Laranja_0001_RDUR2659b.jpg" />
-        </ion-thumbnail>
-        <ion-label>
-          <h1>R$ 24.000,00</h1>
-          <h2>Dafra - NH 300 </h2>
-          <p>Laranja - 2023/2023</p>
-        </ion-label>
-        <ion-button expand="block" slot="end" color="blackzinho">
-          <ion-icon slot="icon-only" name="cart-outline" ></ion-icon>
-        </ion-button>
-      </ion-item>
-    </ion-list>
+  <ion-item *ngFor="let trail of listaTrail" lines="full" color="light" class="borda">
+    <ion-thumbnail slot="start">
+      <img [src]="trail.imagem"/>
+    </ion-thumbnail>
+    <ion-label>
+      <h2>{{ trail.nome }}</h2>
+      <p>{{ trail.descricao }}</p>
+    </ion-label>
+    <ion-button expand="block" slot="end" color="dark" (click)="addProdutoCarrinho(trail)" color="dark">
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+    </ion-button>
+    <ion-badge color="danger">R$ {{ trail.valor | number:'1.2-2' }}</ion-badge>
+  </ion-item>
+
+
 </ion-content>
 
 <ion-footer>
-<ion-toolbar color="laranja">
-  <ion-title>
-    Footer
-  </ion-title>
-</ion-toolbar>
+  <ion-toolbar color="dark">
+
+  </ion-toolbar>
 </ion-footer>

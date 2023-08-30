@@ -1,9 +1,11 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="laranja">
-    <ion-title class="ion-text-center">
-      Categorias
-    </ion-title>
-
+  <ion-toolbar color="dark" center>
+        <ion-title>Categorias</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/carrinho">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
 
   </ion-toolbar>
 </ion-header>
@@ -54,9 +56,7 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar color="laranja">
-    <ion-title>
-      Footer
-    </ion-title>
+  <ion-toolbar color="dark">
+
   </ion-toolbar>
 </ion-footer>
